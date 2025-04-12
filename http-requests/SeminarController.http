@@ -1,0 +1,148 @@
+@host = http://localhost:8080
+@seminarId1 = S1001
+@seminarId2 = S1002
+@seminarId3 = S1003
+@seminarId4 = S1004
+@seminarId5 = S1005
+
+### 🎯 Alle Seminare abrufen
+GET {{host}}/api/seminare
+Accept: application/json
+
+###
+
+### 🆕 Seminar 1: Next-Level AI: Generative KI & LLMs in der Praxis
+POST {{host}}/api/seminare
+Content-Type: application/json
+Accept: application/json
+
+{
+  "seminarId": "{{seminarId1}}",
+  "titel": "Next-Level AI: Generative KI & LLMs in der Praxis",
+  "dozentUsername": "Oliver",
+  "status": "GEPLANT",
+  "art": "ONLINE",
+  "teilnehmerPraesenz": 0,
+  "teilnehmerOnline": 20,
+  "location": "Online",
+  "link": "https://www.conteco.gmbh/next-level-ai-generative-ki-llms-in-der-praxis/",
+  "startzeitpunkt": "2025-06-02T09:00:00.000Z",
+  "endzeitpunkt": "2025-06-06T17:00:00.000Z"
+}
+
+###
+
+### 🆕 Seminar 2: LLMs in Unternehmen: Chancen & Risiken
+POST {{host}}/api/seminare
+Content-Type: application/json
+Accept: application/json
+
+{
+  "seminarId": "{{seminarId2}}",
+  "titel": "LLMs in Unternehmen: Chancen & Risiken",
+  "dozentUsername": "Oliver",
+  "status": "IN_VORBEREITUNG",
+  "art": "PRAESENZ",
+  "teilnehmerPraesenz": 15,
+  "teilnehmerOnline": 0,
+  "location": "Berlin",
+  "link": "https://www.conteco.gmbh/llms-in-unternehmen-chancen-risiken/",
+  "startzeitpunkt": "2025-06-15T09:00:00.000Z",
+  "endzeitpunkt": "2025-06-15T17:00:00.000Z"
+}
+
+###
+
+### 🆕 Seminar 3: LLM-Integration: LangChain, Haystack & Co.
+POST {{host}}/api/seminare
+Content-Type: application/json
+Accept: application/json
+
+{
+  "seminarId": "{{seminarId3}}",
+  "titel": "LLM-Integration: LangChain, Haystack & Co.",
+  "dozentUsername": "Oliver",
+  "status": "IN_DURCHFUEHRUNG",
+  "art": "HYBRID",
+  "teilnehmerPraesenz": 10,
+  "teilnehmerOnline": 10,
+  "location": "München",
+  "link": "https://www.conteco.gmbh/llm-integration-langchain-haystack-co/",
+  "startzeitpunkt": "2025-07-01T09:00:00.000Z",
+  "endzeitpunkt": "2025-07-01T17:00:00.000Z"
+}
+
+###
+
+### 🆕 Seminar 4: Gen AI: MLOps & DevOps für KI-Projekte
+POST {{host}}/api/seminare
+Content-Type: application/json
+Accept: application/json
+
+{
+  "seminarId": "{{seminarId4}}",
+  "titel": "Gen AI: MLOps & DevOps für KI-Projekte",
+  "dozentUsername": "Oliver",
+  "status": "ABGESAGT",
+  "art": "ONLINE",
+  "teilnehmerPraesenz": 0,
+  "teilnehmerOnline": 25,
+  "location": "Online",
+  "link": "https://www.conteco.gmbh/gen-ai-mlops-devops-fuer-ki-projekte/",
+  "startzeitpunkt": "2025-07-15T09:00:00.000Z",
+  "endzeitpunkt": "2025-07-15T17:00:00.000Z"
+}
+
+###
+
+### 🆕 Seminar 5: Automatisiertes Machine Learning & Explainable AI
+POST {{host}}/api/seminare
+Content-Type: application/json
+Accept: application/json
+
+{
+  "seminarId": "{{seminarId5}}",
+  "titel": "Automatisiertes Machine Learning & Explainable AI",
+  "dozentUsername": "Oliver",
+  "status": "VERRECHNET",
+  "art": "PRAESENZ",
+  "teilnehmerPraesenz": 12,
+  "teilnehmerOnline": 0,
+  "location": "Hamburg",
+  "link": "https://www.conteco.gmbh/automatisiertes-machine-learning-explainable-ai/",
+  "startzeitpunkt": "2025-08-01T09:00:00.000Z",
+  "endzeitpunkt": "2025-08-01T17:00:00.000Z"
+}
+
+###
+
+### 🎯 Seminar per ID abrufen (Beispiel-ID bitte anpassen!)
+GET {{host}}/api/seminare/11111111-2222-3333-4444-555555555555
+Accept: application/json
+
+###
+
+### 🔁 Seminar aktualisieren (Beispiel-ID anpassen)
+PUT {{host}}/api/seminare/11111111-2222-3333-4444-555555555555
+Content-Type: application/json
+Accept: application/json
+
+{
+  "seminarId": "12003",
+  "titel": "🚀 LLM-Integration: LangChain, Haystack & Co.",
+  "dozentUsername": "Oliver",
+  "status": "VERRECHNET",
+  "art": "HYBRID",
+  "teilnehmerPraesenz": 11,
+  "teilnehmerOnline": 9,
+  "location": "München",
+  "link": "https://www.conteco.gmbh/llm-integration-langchain-haystack-co/",
+  "startzeitpunkt": "2025-07-01T09:00:00.000Z",
+  "endzeitpunkt": "2025-07-01T17:00:00.000Z"
+}
+
+###
+
+### ❌ Seminar löschen (Beispiel-ID anpassen)
+DELETE {{host}}/api/seminare/11111111-2222-3333-4444-555555555555
+Accept: application/json
