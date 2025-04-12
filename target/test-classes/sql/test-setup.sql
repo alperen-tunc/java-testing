@@ -1,0 +1,1 @@
+INSERT INTO KUNDE (id, name) VALUES (1, 'CONTECO e.U.');

@@ -1,0 +1,16 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "database-client.connections": [
+  {
+    "name": "H2 Seminar DB",
+    "driver": "h2",
+    "url": "jdbc:h2:file:./seminare;AUTO_SERVER=true",
+    "username": "",
+    "password": "",
+    "options": {
+      "viewQuery": "SELECT TABLE_NAME AS name FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_SCHEMA = 'PUBLIC' ORDER BY TABLE_NAME"
+    }
+  }
+]
+
+}

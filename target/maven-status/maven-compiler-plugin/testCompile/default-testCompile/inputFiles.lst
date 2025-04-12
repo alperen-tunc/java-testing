@@ -1,0 +1,10 @@
+/home/alperen/Project/java-testing/src/test/java/gmbh/conteco/seminarverwaltung/SeminarverwaltungApplicationTests.java
+/home/alperen/Project/java-testing/src/test/java/gmbh/conteco/seminarverwaltung/controller/SeminarControllerIntegrationTest.java
+/home/alperen/Project/java-testing/src/test/java/gmbh/conteco/seminarverwaltung/controller/SeminarControllerTest.java
+/home/alperen/Project/java-testing/src/test/java/gmbh/conteco/seminarverwaltung/domain/SeminarTest.java
+/home/alperen/Project/java-testing/src/test/java/gmbh/conteco/seminarverwaltung/mapper/SeminarMapperTest.java
+/home/alperen/Project/java-testing/src/test/java/gmbh/conteco/seminarverwaltung/repository/SeminarRepositoryIntegrationTest.java
+/home/alperen/Project/java-testing/src/test/java/gmbh/conteco/seminarverwaltung/repository/SeminarRepositoryWithEntityManagerAndKundeWithDataSqlIntegrationTest.java
+/home/alperen/Project/java-testing/src/test/java/gmbh/conteco/seminarverwaltung/repository/SeminarRepositoryWithEntityManagerAndKundeWithSqlScriptsIntegrationTest.java
+/home/alperen/Project/java-testing/src/test/java/gmbh/conteco/seminarverwaltung/repository/SeminarRepositoryWithEntityManagerAndUserWithoutDataSqlIntegrationTest.java
+/home/alperen/Project/java-testing/src/test/java/gmbh/conteco/seminarverwaltung/service/SeminarServiceImplTest.java

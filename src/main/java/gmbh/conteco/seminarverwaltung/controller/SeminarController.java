@@ -1,5 +1,6 @@
 package gmbh.conteco.seminarverwaltung.controller;
 
+import gmbh.conteco.seminarverwaltung.domain.User;
 import gmbh.conteco.seminarverwaltung.dto.SeminarDto;
 import gmbh.conteco.seminarverwaltung.dto.SeminarMitTagenDto;
 import gmbh.conteco.seminarverwaltung.service.SeminarService;
@@ -12,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @RestController
@@ -30,8 +32,8 @@ public class SeminarController {
 
     @Operation(summary = "Ein Seminar abrufen")
     @GetMapping("/{id}")
-    public SeminarMitTagenDto getById(@PathVariable UUID id) {
-        return seminarService.getById(id);
+    public Optional<User> getById(@PathVariable Long id) {
+        return seminarService.getUserById(id);
     }
 
     @Operation(summary = "Ein neues Seminar erstellen")

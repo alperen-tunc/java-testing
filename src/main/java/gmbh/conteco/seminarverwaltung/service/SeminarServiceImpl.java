@@ -20,6 +20,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -59,6 +60,10 @@ public class SeminarServiceImpl implements SeminarService {
         }
 
         return seminartage;
+    }
+
+    public Optional<User> getUserById(Long id) {
+        return userRepository.findByUsernameAndIsDozentTrue(id);
     }
 
     @Override
